@@ -1,0 +1,93 @@
+<html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <body>
+    <div class="jumbotron"> 
+      <h1>Artificial Intelligence Enterprise Systems - Final Project</h1>
+    <h2>Applicants
+    <a href="/create_view"> <button type='submit' class='btn btn-primary'>Add new</button></a></h2>
+    <table class="table">
+<tr><td>ID</td><td>Name</td><td>Married</td><td>Gender</td><td>Dependents</td><td>Education</td>
+  <td>Applicant Income</td><td>CoApplicant Income</td><td>Loan Amount</td><td>Credit History</td><td>Property Area</td><td>Loan Status</td><td>Actions</td></tr>
+      {% for applicant in applicants %}
+        <tr>
+          <td>
+          {{applicant.id}}
+          </td>
+          <td>
+             {{applicant.name}}
+          </td>
+          <td>
+            {% if applicant.married %}
+             Yes 
+            {% else %}
+              No
+            {% endif %}
+          </td>
+          <td>
+            {% if applicant.gender %}
+             Male 
+            {% else %}
+              Female
+            {% endif %}
+          </td>
+          <td>
+            {{applicant.dependents}}
+         </td>
+         <td>
+          {% if applicant.education == '1' %}
+          Graduate 
+         {% else %}
+           Not Graduate
+         {% endif %}
+       </td>
+          <td>
+            {{applicant.applicant_income}}
+         </td>
+         <td>
+          {{applicant.coapplicant_income}}
+          </td>
+          <td>
+            {{applicant.loan_amount}}
+            </td>
+            <td>
+              {{applicant.credit_history}}
+              </td>
+              <td>
+               {% if applicant.property_area == '2' %}
+                Urban 
+               {% elif applicant.property_area == '1'%}
+                 SemiRural
+               {% else %}
+                 Rural
+               {% endif %}
+                </td>
+         <td>
+          {% if applicant.loan_status == '1' %}
+                <p style='color:green'>Approved</p> 
+               {% elif applicant.loan_status == '0'%}
+               <p style='color:red'>Not Approved</p> 
+               {% else %}
+                 None
+               {% endif %}
+          </td>
+          <td>
+            <form method="POST" action="./update_view" style="display: inline">
+              <input type="hidden" value="{{applicant.id}}" name="id">
+              <input type="submit" class='btn btn-primary' value="Update">
+            </form>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{applicant.id}}" name="id">
+              <input type="submit" class='btn btn-primary'  onclick="return confirm('Are you sure?')"  value="Delete">
+            </form>
+            <form method="POST" action="./process" style="display: inline">
+              <input type="hidden" value="{{applicant.id}}" name="id">
+              <input type="submit" class='btn btn-primary' value="Process">
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+  </body>
+</html>

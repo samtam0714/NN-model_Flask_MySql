@@ -1,0 +1,58 @@
+<html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <body>
+    <div class="jumbotron">
+    
+    <h1>Artificial Intelligence Enterprise Systems - Final Project</h1>
+    <h2>Add Applicant</h2>
+      <form method="POST" action="./create">
+    Name
+        <input type="text" name="name" class='form-control'>
+    Gender <br>
+    <input type="radio" id="gender" name="gender" value="1" >
+    <label for="male">Male</label>
+    <input type="radio" id="gender" name="gender" value="0" checked>
+    <label for="female">Female</label><br>
+    Married<br>
+    <input type="radio" id="married" name="married" value="1" >
+    <label for="yes">Yes</label>
+    <input type="radio" id="married" name="married" value="0" checked>
+    <label for="no">No</label><br>
+    Dependents
+    <input type='number' name="dependents" class='form-control'>
+    Education
+    <br>
+    <input type="radio" id="education" name="education" value="1" >
+    <label for="male">Graduate</label>
+    <input type="radio" id="education" name="education" value="0" checked>
+    <label for="female">Not Graduate</label><br>
+    Self employed<br>
+    <input type="radio" id="self_employed" name="self_employed" value="1" >
+    <label for="yes">Yes</label>
+    <input type="radio" id="self_employed" name="self_employed" value="0" checked>
+    <label for="no">No</label><br>
+    Applicant income
+    <input type='number' name="applicant_income" class='form-control'>
+    CoApplicant income
+    <input type='number' name="coapplicant_income" class='form-control'>
+    Loan Amount
+    <input type='number' name="loan_amount" class='form-control'>
+    Loan Amount Term
+    <input type='number' name="loan_amount_term" class='form-control'>
+    Credit History
+    <input type='number' name="credit_history" class='form-control'>
+    Property Area
+    <br>
+    <input type="radio" id="property_area" name="property_area" value="2" checked>
+    <label for="Urban">Urban</label>
+    <input type="radio" id="property_area" name="property_area" value="1" >
+    <label for="Rural">SemiRural</label>
+    <input type="radio" id="property_area" name="property_area" value="0" >
+    <label for="Rural">Rural</label><br>
+        <input type="submit" class='btn btn-primary' value="Add">
+      </form>
+  </div>
+  </body>
+</html>
+

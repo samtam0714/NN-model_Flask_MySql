@@ -1,0 +1,25 @@
+<html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <body>
+    <div class="jumbotron">
+    <h1>Artificial Intelligence Enterprise Systems - Final Project</h1>
+    <h2>Update Applicant: {{applicant.name}}</h2>
+      <form method="POST" action="./update">
+    <input type="hidden" value="{{applicant.id}}" name="id">
+    Applicant income
+    <input type='number' value="{{applicant.applicant_income}}" name="applicant_income" class='form-control'>
+    CoApplicant income
+    <input type='number' value="{{applicant.coapplicant_income}}" name="coapplicant_income" class='form-control'>
+    Loan Amount
+    <input type='number' value="{{applicant.loan_amount}}" name="loan_amount" class='form-control'>
+    Loan Amount Term
+    <input type='number' value="{{applicant.loan_amount_term}}" name="loan_amount_term" class='form-control'>
+    Credit History
+    <input type='number' value="{{applicant.credit_history}}" name="credit_history" class='form-control'>
+        <input type="submit" class='btn btn-primary' value="Update">
+      </form>
+  </div>
+  </body>
+</html>
+
