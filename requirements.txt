@@ -7,4 +7,4 @@ mysqlclient==1.4.6
 sklearn==0.0
 numpy==1.18.1
 Keras==2.3.1
-tensorflow==2.0.1 
+tensorflow==2.5.0 
