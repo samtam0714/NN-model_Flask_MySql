@@ -5,6 +5,6 @@ Jinja2==2.10.3
 Gunicorn==20.0.4
 mysqlclient==1.4.6
 sklearn==0.0
-numpy==1.18.1
+numpy==1.22.0
 Keras==2.3.1
 tensorflow==2.0.1 
